@@ -7,7 +7,13 @@
     
 <style>
     
-    /* css here */
+    input[type=text], textarea, select {
+            width: 100;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    
 body
     {
         font-family: 'Cuprum', sans-serif;
@@ -129,22 +135,33 @@ SFS dark red = #9f2026; */
 </head>
 
 <body>
+
+        <div>
+          <br> <p style="padding-left: 8vw;">Enter Participant Code: <input type="text" id="code" placeholder="" /></p>
+        </div>
+
+
+   
     
     <div width="100%" style="min-height: 350px;">
-    <div style="padding-left: 8vw;float:left; width:50vw">
+    <div style="padding-left: 8vw;float:left; width:70vw; max-width: 1000px;">
      <h1>Fit Correction Skill Evaluation Test</h1>
      <h2>Instructions</h2>
         <p>The test consists of 10 garments with unique fit issues. Each question consists of </p>
         <ul>
-            <li>a 3D avatar wearing a garment which you can zoom in or rotate </li>
-            <li>The pattern pieces sewn together to create the garment </li>
-            <li> Three options for pattern modifications of which one of them would correct the garment fit</li>
+            <li>A 3D avatar wearing a garment which you can zoom, rotate and pan</li>
+            <li>The pattern pieces sewn together to create the garment shown in the simulation </li>
+            <li>Three options of which one will correct the garment fit (red lines represent the pattern modification)</li>
         </ul> 
-        <p>
-        You will have to analyze the garment fit and patterns carefully to identify the fit issue and choose the potential pattern modification that will correct the garment fit. 
+        
+        <p>You will have to analyze the garment fit and patterns carefully to identify the fit issue and choose the potential pattern modification that will correct the garment fit. 
         Try to answer the questions as rapidly and accurately as you can. Please indicate your choice by selecting the correct option. Click the submit button at the end of the page when you are ready to submit your answers.</p><br><br><br>
      </div>
     </div>
+    
+        
+     <hr style="height:2px;border-width:0;color:gray;background-color:lightgrey; width: 50%">
+    
 	  	<div style="padding-bottom: 50px; padding-top: 50px;">
 	  		<p class="question">1. Please select the pattern modification that will correct the garment fit</p>
             <center>
@@ -411,7 +428,7 @@ SFS dark red = #9f2026; */
     </div></center>
   
 
-    <div class="quizAnswers" id="correctAnswer1"></div>
+<!--    <div class="quizAnswers" id="correctAnswer1"></div>
 	    <div class="quizAnswers" id="correctAnswer2"></div>
     <div class="quizAnswers" id="correctAnswer3"></div>
     <div class="quizAnswers" id="correctAnswer4"></div>
@@ -420,7 +437,7 @@ SFS dark red = #9f2026; */
     <div>
     	<h2 class="quizScore" id="userScore"></h2>
     </div>
-    
+   --> 
     
     
     
@@ -468,13 +485,52 @@ SFS dark red = #9f2026; */
 		}
 
 	// show score as "score/possible score"
-		var showScore = "Your Score: " + calcScore +"/" + questionCounter;
+	//	var showScore = "Your Score: " + calcScore +"/" + questionCounter;
 	// if 4/4, "perfect score!"
-		if (calcScore === questionCounter) {
-			showScore = showScore + "&nbsp; <strong>Perfect Score!</strong>"
-		};
-		document.getElementById('userScore').innerHTML = showScore;
-	}
+	//	if (calcScore === questionCounter) {
+	//		showScore = showScore + "&nbsp; <strong>Perfect Score!</strong>"
+	//	};
+	//	document.getElementById('userScore').innerHTML = showScore;
+	
+	
+                // Get the data from each element on the form.
+    	const name = document.getElementById('code');
+        
+        // This variable stores all the data.
+        let data = 
+            'Pre-Training Questionnaire' + ' \r\n' + 
+            code.value + ' \r\n' + 
+            answerScore('q1') + ' \r\n' + 
+            answerScore('q2') + ' \r\n' + 
+            answerScore('q3') + ' \r\n' + 
+            answerScore('q4') + ' \r\n' + 
+            answerScore('q5') + ' \r\n' + 
+            answerScore('q6') + ' \r\n' + 
+            answerScore('q7') + ' \r\n' + 
+            answerScore('q8') + ' \r\n' + 
+            answerScore('q9') + ' \r\n' + 
+            answerScore('q10') + ' \r\n' + 
+            calcScore + ' \r\n ';
+        
+        // Convert the text to BLOB.
+        const textToBLOB = new Blob([data], { type: 'text/plain' });
+        const sFileName = code.value+'(pre).txt';	   // The file to save the data.
+
+        let newLink = document.createElement("a");
+        newLink.download = sFileName;
+
+        if (window.webkitURL != null) {
+            newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+        }
+        
+        else {
+            newLink.href = window.URL.createObjectURL(textToBLOB);
+            newLink.style.display = "none";
+            document.body.appendChild(newLink);
+        }
+
+        newLink.click(); 
+    }
 
 $(document).ready(function() {
 
@@ -483,9 +539,8 @@ $(document).ready(function() {
 	});
 
 });
+      
+        
     </script>
 </body>
 </html>
-
-
-
