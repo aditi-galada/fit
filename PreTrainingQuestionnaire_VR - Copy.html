@@ -1,0 +1,717 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cuprum&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+    <style>
+ 
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pre-Training Questionnaire</title>
+
+    <script type="text/javascript" src="https://static.sketchfab.com/api/sketchfab-viewer-1.10.4.js"></script>
+</head>
+
+<body>
+
+    <div>
+      <br> <p style="padding-left: 8vw;">Enter Participant Code: <input type="text" id="code" placeholder="" /></p>
+    </div>
+
+
+   
+    
+    <div width="100%" style="min-height: 350px;">
+    <div style="width: 1500px; margin: auto;">
+        <h1>Fit Correction Skill Evaluation Test</h1>
+        <h3>Project Title: Improving understanding of connecting 2D and 3D using digital prototyping and virtual reality</h3>
+     
+        <p>1. Please fill in the blanks or select an item for your demographic information</p>
+        <ol type="a">
+            <li>Age: &emsp;&emsp;
+                <input type="text" id="code" placeholder="" name="sec1q1"/>
+            </li><br>
+            <li>Gender: &emsp;&emsp;
+                <input class="answer" type="radio" name="sec1q2" value="1"><label class="options"> &nbsp;Male</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec1q2" value="2"><label class="options"> &nbsp;Female</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec1q2" value="3"><label class="options"> &nbsp;Other</label>
+            </li><br>
+            <li>Race: &emsp;&emsp;&emsp;
+                <input class="answer" type="radio" name="sec1q3" value="1"><label class="options"> &nbsp;American Indian or Alaska Native</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec1q3" value="2"><label class="options"> &nbsp;Asian</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec1q3" value="3"><label class="options"> &nbsp;Black or African American</label>
+                <input class="answer" type="radio" name="sec1q3" value="4"><label class="options"> &nbsp;Native Hawaiian or other Pacific Islander</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec1q3" value="5"><label class="options"> &nbsp;White</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec1q3" value="6"><label class="options"> &nbsp;Other</label>
+            </li><br>
+            <li>Education: &emsp;
+                <input class="answer" type="radio" name="sec1q4" value="1"><label class="options"> &nbsp;High school or less</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec1q4" value="2"><label class="options"> &nbsp;Undergraduate student</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec1q4" value="3"><label class="options"> &nbsp;Master's student</label>
+                <input class="answer" type="radio" name="sec1q4" value="4"><label class="options"> &nbsp;Doctoral student</label>&emsp;&emsp;
+            </li><br>
+        </ol>
+        
+        <p>2. Please fill in the following information based on your experience</p>
+        <ol type="a">
+            <li>Years of pattern making experience: &emsp;&emsp;
+                <input class="answer" type="radio" name="sec2q1" value="1"><label class="options"> &nbsp;1-2</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec2q1" value="2"><label class="options"> &nbsp;3-4</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec2q1" value="3"><label class="options"> &nbsp;5-6</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec2q1" value="4"><label class="options"> &nbsp;7-8</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec2q1" value="5"><label class="options"> &nbsp;9-10</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec2q1" value="6"><label class="options"> &nbsp;>10</label>&emsp;&emsp;
+            </li><br>
+            <li>Virtual reality experience: &emsp; &emsp; &emsp;&emsp;&emsp;&nbsp;
+                <input class="answer" type="radio" name="sec2q2" value="1"><label class="options"> &nbsp;None</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec2q2" value="2"><label class="options"> &nbsp;Very little</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec2q2" value="3"><label class="options"> &nbsp;Average</label>
+                <input class="answer" type="radio" name="sec2q2" value="4"><label class="options"> &nbsp;High</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec2q2" value="5"><label class="options"> &nbsp;Expert</label>&emsp;&emsp;
+            </li><br>
+        </ol>
+                
+        <p>3. Please rate the following on a 7 point Likert scale based on your perception of ease of use of digital prototyping</p>
+        <ol type="a">
+            <li>Learning to use 3D prototyping would be easy : &emsp;&emsp;<br><br>    
+                <input class="answer" type="radio" name="sec3q1" value="1"><label class="options"> &nbsp;Srongly agree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec3q1" value="2"><label class="options"> &nbsp;Agree&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec3q1" value="3"><label class="options"> &nbsp;Somewhat agree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec3q1" value="4"><label class="options"> &nbsp;Neither agree nor disagree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec3q1" value="5"><label class="options"> &nbsp;Somewhat disagree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec3q1" value="6"><label class="options"> &nbsp;Disagree&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec3q1" value="7"><label class="options"> &nbsp;Strongly disagree</label>&emsp;&emsp;
+            </li><br>
+            <li>I would find it easy to get the 3D prototyping training module to do what I want it to do : &emsp;&emsp;<br><br>    
+                <input class="answer" type="radio" name="sec3q2" value="1"><label class="options"> &nbsp;Srongly agree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec3q2" value="2"><label class="options"> &nbsp;Agree&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec3q2" value="3"><label class="options"> &nbsp;Somewhat agree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec3q2" value="4"><label class="options"> &nbsp;Neither agree nor disagree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec3q2" value="5"><label class="options"> &nbsp;Somewhat disagree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec3q2" value="6"><label class="options"> &nbsp;Disagree&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec3q2" value="7"><label class="options"> &nbsp;Strongly disagree</label>&emsp;&emsp;
+            </li><br>
+            <li>My interaction with 3D prototyping would be clear and understandable : &emsp;&emsp;<br><br>    
+                <input class="answer" type="radio" name="sec3q3" value="1"><label class="options"> &nbsp;Srongly agree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec3q3" value="2"><label class="options"> &nbsp;Agree&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec3q3" value="3"><label class="options"> &nbsp;Somewhat agree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec3q3" value="4"><label class="options"> &nbsp;Neither agree nor disagree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec3q3" value="5"><label class="options"> &nbsp;Somewhat disagree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec3q3" value="6"><label class="options"> &nbsp;Disagree&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec3q3" value="7"><label class="options"> &nbsp;Strongly disagree</label>&emsp;&emsp;
+            </li><br>
+            <li>I would find 3D prototyping to be flexible to interact with : &emsp;&emsp;<br><br>    
+                <input class="answer" type="radio" name="sec3q4" value="1"><label class="options"> &nbsp;Srongly agree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec3q4" value="2"><label class="options"> &nbsp;Agree&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec3q4" value="3"><label class="options"> &nbsp;Somewhat agree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec3q4" value="4"><label class="options"> &nbsp;Neither agree nor disagree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec3q4" value="5"><label class="options"> &nbsp;Somewhat disagree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec3q4" value="6"><label class="options"> &nbsp;Disagree&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec3q4" value="7"><label class="options"> &nbsp;Strongly disagree</label>&emsp;&emsp;
+            </li><br>
+            <li>It would be easy for me to become skillful at using 3D prototyping : &emsp;&emsp;<br><br>    
+                <input class="answer" type="radio" name="sec3q5" value="1"><label class="options"> &nbsp;Srongly agree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec3q5" value="2"><label class="options"> &nbsp;Agree&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec3q5" value="3"><label class="options"> &nbsp;Somewhat agree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec3q5" value="4"><label class="options"> &nbsp;Neither agree nor disagree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec3q5" value="5"><label class="options"> &nbsp;Somewhat disagree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec3q5" value="6"><label class="options"> &nbsp;Disagree&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec3q5" value="7"><label class="options"> &nbsp;Strongly disagree</label>&emsp;&emsp;
+            </li><br>
+            <li>Overall, I would find 3D prototyping easy to use : &emsp;&emsp;<br><br>    
+                <input class="answer" type="radio" name="sec3q6" value="1"><label class="options"> &nbsp;Srongly agree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec3q6" value="2"><label class="options"> &nbsp;Agree&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec3q6" value="3"><label class="options"> &nbsp;Somewhat agree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec3q6" value="4"><label class="options"> &nbsp;Neither agree nor disagree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec3q6" value="5"><label class="options"> &nbsp;Somewhat disagree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec3q6" value="6"><label class="options"> &nbsp;Disagree&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec3q6" value="7"><label class="options"> &nbsp;Strongly disagree</label>&emsp;&emsp;
+            </li><br>
+        </ol>
+                
+        <p>4. Please rate the following on a 7 point Likert scale</p>
+        <ol type="a">
+            <li>Using 3D prototyping in my job would enable me to accomplish tasks more quickly : &emsp;&emsp;<br><br>    
+                <input class="answer" type="radio" name="sec4q1" value="1"><label class="options"> &nbsp;Srongly agree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec4q1" value="2"><label class="options"> &nbsp;Agree&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec4q1" value="3"><label class="options"> &nbsp;Somewhat agree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec4q1" value="4"><label class="options"> &nbsp;Neither agree nor disagree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec4q1" value="5"><label class="options"> &nbsp;Somewhat disagree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec4q1" value="6"><label class="options"> &nbsp;Disagree&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec4q1" value="7"><label class="options"> &nbsp;Strongly disagree</label>&emsp;&emsp;
+            </li><br>
+            <li>Using 3D prototyping would improve my job performance : &emsp;&emsp;<br><br>    
+                <input class="answer" type="radio" name="sec4q2" value="1"><label class="options"> &nbsp;Srongly agree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec4q2" value="2"><label class="options"> &nbsp;Agree&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec4q2" value="3"><label class="options"> &nbsp;Somewhat agree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec4q2" value="4"><label class="options"> &nbsp;Neither agree nor disagree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec4q2" value="5"><label class="options"> &nbsp;Somewhat disagree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec4q2" value="6"><label class="options"> &nbsp;Disagree&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec4q2" value="7"><label class="options"> &nbsp;Strongly disagree</label>&emsp;&emsp;
+            </li><br>
+            <li>Using 3D prototyping in my job would increase my productivity : &emsp;&emsp;<br><br>    
+                <input class="answer" type="radio" name="sec4q3" value="1"><label class="options"> &nbsp;Srongly agree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec4q3" value="2"><label class="options"> &nbsp;Agree&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec4q3" value="3"><label class="options"> &nbsp;Somewhat agree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec4q3" value="4"><label class="options"> &nbsp;Neither agree nor disagree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec4q3" value="5"><label class="options"> &nbsp;Somewhat disagree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec4q3" value="6"><label class="options"> &nbsp;Disagree&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec4q3" value="7"><label class="options"> &nbsp;Strongly disagree</label>&emsp;&emsp;
+            </li><br>
+            <li>Using 3D prototyping would enhance my effectiveness on the job : &emsp;&emsp;<br><br>    
+                <input class="answer" type="radio" name="sec4q4" value="1"><label class="options"> &nbsp;Srongly agree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec4q4" value="2"><label class="options"> &nbsp;Agree&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec4q4" value="3"><label class="options"> &nbsp;Somewhat agree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec4q4" value="4"><label class="options"> &nbsp;Neither agree nor disagree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec4q4" value="5"><label class="options"> &nbsp;Somewhat disagree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec4q4" value="6"><label class="options"> &nbsp;Disagree&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec4q4" value="7"><label class="options"> &nbsp;Strongly disagree</label>&emsp;&emsp;
+            </li><br>
+            <li>Using 3D prototyping would make it easier to do my job : &emsp;&emsp;<br><br>    
+                <input class="answer" type="radio" name="sec4q5" value="1"><label class="options"> &nbsp;Srongly agree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec4q5" value="2"><label class="options"> &nbsp;Agree&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec4q5" value="3"><label class="options"> &nbsp;Somewhat agree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec4q5" value="4"><label class="options"> &nbsp;Neither agree nor disagree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec4q5" value="5"><label class="options"> &nbsp;Somewhat disagree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec4q5" value="6"><label class="options"> &nbsp;Disagree&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec4q5" value="7"><label class="options"> &nbsp;Strongly disagree</label>&emsp;&emsp;
+            </li><br>
+            <li>I would find 3D prototyping useful in my job : &emsp;&emsp;<br><br>    
+                <input class="answer" type="radio" name="sec4q6" value="1"><label class="options"> &nbsp;Srongly agree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec4q6" value="2"><label class="options"> &nbsp;Agree&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec4q6" value="3"><label class="options"> &nbsp;Somewhat agree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec4q6" value="4"><label class="options"> &nbsp;Neither agree nor disagree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec4q6" value="5"><label class="options"> &nbsp;Somewhat disagree</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec4q6" value="6"><label class="options"> &nbsp;Disagree&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec4q6" value="7"><label class="options"> &nbsp;Strongly disagree</label>&emsp;&emsp;
+            </li><br>
+        </ol>
+        
+         <p>5. <b>Apparel Spatial Visualization Test:</b>The following section consists of 10 sets of pattern pieces, which can be constructed, in fabric to create a garment. To the right of each set of pattern pieces there are sketches of some garments. You are to decide which one of these garments can be made from the pattern pieces shown. The sketch always shows the outside, front view of the garment. <br>Remember: In this test there will always be a group of five (5) sketches, following each set of pattern pieces. In every group there is only one correct garment sketch. Study the set of pattern pieces carefully and decide which garment can be made from it. Show your choice by selecting the lettered button, which is the same as that of the garment you have chosen. Work as rapidly and as accurately as you can. If you are not sure of an answer, mark the choice, which is your best guess.</p>
+        <center><ol type="a">
+            <li><br><img src="Images/asvt1.png" width="600px"><br><br>    
+                <input class="answer" type="radio" name="sec5q1" value="1"><label class="options"> &nbsp;A&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q1" value="2"><label class="options"> &nbsp;B&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q1" value="3"><label class="options"> &nbsp;C&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q1" value="4"><label class="options"> &nbsp;D&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q1" value="5"><label class="options"> &nbsp;E&emsp;&emsp;</label>&emsp;&emsp;
+            </li><br>
+            <hr style="height:2px;border-width:0;color:gray;background-color:lightgrey; width: 50%">
+            <li><br><img src="Images/asvt2.png" width="600px"><br><br>    
+                <input class="answer" type="radio" name="sec5q2" value="1"><label class="options"> &nbsp;A&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q2" value="2"><label class="options"> &nbsp;B&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q2" value="3"><label class="options"> &nbsp;C&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q2" value="4"><label class="options"> &nbsp;D&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q2" value="5"><label class="options"> &nbsp;E&emsp;&emsp;</label>&emsp;&emsp;
+            </li><br>
+            <hr style="height:2px;border-width:0;color:gray;background-color:lightgrey; width: 50%">
+            <li><br><img src="Images/asvt3.png" width="600px"><br><br>    
+                <input class="answer" type="radio" name="sec5q3" value="1"><label class="options"> &nbsp;A&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q3" value="2"><label class="options"> &nbsp;B&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q3" value="3"><label class="options"> &nbsp;C&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q3" value="4"><label class="options"> &nbsp;D&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q3" value="5"><label class="options"> &nbsp;E&emsp;&emsp;</label>&emsp;&emsp;
+            </li><br>
+            <hr style="height:2px;border-width:0;color:gray;background-color:lightgrey; width: 50%">
+            <li><br><img src="Images/asvt4.png" width="600px"><br><br>    
+                <input class="answer" type="radio" name="sec5q4" value="1"><label class="options"> &nbsp;A&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q4" value="2"><label class="options"> &nbsp;B&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q4" value="3"><label class="options"> &nbsp;C&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q4" value="4"><label class="options"> &nbsp;D&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q4" value="5"><label class="options"> &nbsp;E&emsp;&emsp;</label>&emsp;&emsp;
+            </li><br>
+            <hr style="height:2px;border-width:0;color:gray;background-color:lightgrey; width: 50%">
+            <li><br><img src="Images/asvt5.png" width="600px"><br><br>    
+                <input class="answer" type="radio" name="sec5q5" value="1"><label class="options"> &nbsp;A&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q5" value="2"><label class="options"> &nbsp;B&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q5" value="3"><label class="options"> &nbsp;C&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q5" value="4"><label class="options"> &nbsp;D&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q5" value="5"><label class="options"> &nbsp;E&emsp;&emsp;</label>&emsp;&emsp;
+            </li><br>
+            <hr style="height:2px;border-width:0;color:gray;background-color:lightgrey; width: 50%">
+            <li><br><img src="Images/asvt6.png" width="600px"><br><br>    
+                <input class="answer" type="radio" name="sec5q6" value="1"><label class="options"> &nbsp;A&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q6" value="2"><label class="options"> &nbsp;B&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q6" value="3"><label class="options"> &nbsp;C&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q6" value="4"><label class="options"> &nbsp;D&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q6" value="5"><label class="options"> &nbsp;E&emsp;&emsp;</label>&emsp;&emsp;
+            </li><br>
+            <hr style="height:2px;border-width:0;color:gray;background-color:lightgrey; width: 50%">
+            <li><br><img src="Images/asvt7.png" width="600px"><br><br>    
+                <input class="answer" type="radio" name="sec5q7" value="1"><label class="options"> &nbsp;A&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q7" value="2"><label class="options"> &nbsp;B&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q7" value="3"><label class="options"> &nbsp;C&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q7" value="4"><label class="options"> &nbsp;D&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q7" value="5"><label class="options"> &nbsp;E&emsp;&emsp;</label>&emsp;&emsp;
+            </li><br>
+            <hr style="height:2px;border-width:0;color:gray;background-color:lightgrey; width: 50%">
+            <li><br><img src="Images/asvt8.png" width="600px"><br><br>    
+                <input class="answer" type="radio" name="sec5q8" value="1"><label class="options"> &nbsp;A&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q8" value="2"><label class="options"> &nbsp;B&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q8" value="3"><label class="options"> &nbsp;C&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q8" value="4"><label class="options"> &nbsp;D&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q8" value="5"><label class="options"> &nbsp;E&emsp;&emsp;</label>&emsp;&emsp;
+            </li><br>
+            <hr style="height:2px;border-width:0;color:gray;background-color:lightgrey; width: 50%">
+            <li><br><img src="Images/asvt9.png" width="600px"><br><br>    
+                <input class="answer" type="radio" name="sec5q9" value="1"><label class="options"> &nbsp;A&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q9" value="2"><label class="options"> &nbsp;B&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q9" value="3"><label class="options"> &nbsp;C&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q9" value="4"><label class="options"> &nbsp;D&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q9" value="5"><label class="options"> &nbsp;E&emsp;&emsp;</label>&emsp;&emsp;
+            </li><br>
+            <hr style="height:2px;border-width:0;color:gray;background-color:lightgrey; width: 50%">
+            <li><br><img src="Images/asvt10.png" width="600px"><br><br>    
+                <input class="answer" type="radio" name="sec5q10" value="1"><label class="options"> &nbsp;A&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q10" value="2"><label class="options"> &nbsp;B&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q10" value="3"><label class="options"> &nbsp;C&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q10" value="4"><label class="options"> &nbsp;D&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q10" value="5"><label class="options"> &nbsp;E&emsp;&emsp;</label>&emsp;&emsp;
+            </li><br>
+        </ol></center>    
+            
+        <br>
+        <p>6. <b>Fit Correction Skill Evaluation Test:</b> The test consists of 10 garments with unique fit issues. Each question consists of </p>
+        <ul>
+            <li>A 3D avatar wearing a garment which you can zoom, rotate and pan</li>
+            <li>The pattern pieces sewn together to create the garment shown in the simulation </li>
+            <li>Three options of which one will correct the garment fit (red lines represent the pattern modification)</li>
+        </ul> 
+        You will have to analyze the garment fit and patterns carefully to identify the fit issue and choose the potential pattern modification that will correct the garment fit. 
+        Try to answer the questions as rapidly and accurately as you can. Please indicate your choice by selecting the radio button next to the image representing the right pattern modificaition.<br><br><br>
+        <center><ol type="a">
+            <li><br><img src="Images/asvt1.png" width="600px"><br><br>    
+                <input class="answer" type="radio" name="sec5q1" value="1"><label class="options"> &nbsp;A&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q1" value="2"><label class="options"> &nbsp;B&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q1" value="3"><label class="options"> &nbsp;C&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q1" value="4"><label class="options"> &nbsp;D&emsp;&emsp;</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec5q1" value="5"><label class="options"> &nbsp;E&emsp;&emsp;</label>&emsp;&emsp;
+            </li><br>
+        </ol></center>
+        
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <div>
+        
+        <h1>Pre-Training Questionnaire</h1><h2>Instructions</h2>
+        <p>The test consists of 10 garments with unique fit issues. Each question consists of </p>
+        <ul>
+            <li>A 3D avatar wearing a garment which you can zoom, rotate and pan</li>
+            <li>The pattern pieces sewn together to create the garment shown in the simulation </li>
+            <li>Three options of which one will correct the garment fit (red lines represent the pattern modification)</li>
+        </ul> 
+        
+        <p>You will have to analyze the garment fit and patterns carefully to identify the fit issue and choose the potential pattern modification that will correct the garment fit. 
+        Try to answer the questions as rapidly and accurately as you can. Please indicate your choice by selecting the correct option. Click the submit button at the end of the page when you are ready to submit your answers.</p><br><br><br>
+     </div>
+    </div>
+    
+        
+     <hr style="height:2px;border-width:0;color:gray;background-color:lightgrey; width: 50%">
+    
+	  	<div style="padding-bottom: 50px; padding-top: 50px;">
+	  		<p class="question">1. Please select the pattern modification that will correct the garment fit</p>
+            <center>
+            <div style="margin-left: 0px; width:97%; padding-left:3%; height: 400px; background-color: ;" class="sketchfab-embed-wrapper"><center> 
+                <iframe style="float:left; height:400px;" width="45%" title="back neck tight 2" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/4d4aa08fb32a4b929ea91eb37f55377c/embed"> </iframe> 
+                <img style="max-width: 45%; max-height: 400px;" src="Images/01OriginalPattern.png">
+            </center></div>
+	    	<br><br>
+             <div style="margin-left: 0px; padding-left:2%; background-color: ;"> 
+                    <input class="answer" type="radio" name="q1" value="1">
+                    <label id="correctString1"><img src="Images/01option1.png" width="29%" style="padding-right: 1.5%;"></label>
+
+
+                    <input class="answer" type="radio" name="q1" value="0">
+                    <label><img src="Images/01option2.png" width="29%"  style="padding-right: 1.5%;"></label>
+
+
+                    <input class="answer" type="radio" name="q1" value="0">
+                    <label><img src="Images/01option3.png" width="29%"  style="padding-right: 1.5%;"></label>
+
+            </div>    
+	  	</center></div>
+    
+    <hr style="height:2px;border-width:0;color:gray;background-color:lightgrey; width: 50%">
+    
+	  	<div style="padding-bottom: 50px;  padding-top: 50px;">
+	  		<p class="question">2. Please select the pattern modification that will correct the garment fit</p>
+            <center>
+            <div style="margin-left: 0px; width:97%; padding-left:3%; height: 400px; background-color: ;" class="sketchfab-embed-wrapper"><center> 
+                <iframe style="float:left; height:400px;" width="45%" title="back neck tight 2" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/45e67c5fbf2b4f2f859d193ab59cbd1d/embed"> </iframe> 
+                <img style="max-width: 45%; max-height: 400px;" src="Images/02OriginalPattern.png">
+            </center></div>
+	    	<br><br>
+             <div style="margin-left: 0px; padding-left:2%; background-color: ;"> 
+                    <input class="answer" type="radio" name="q2" value="0">
+                    <label><img src="Images/02option1.png" width="29%" style="padding-right: 1.5%;"></label>
+
+
+                    <input class="answer" type="radio" name="q2" value="0">
+                    <label><img src="Images/02option2.png" width="29%"  style="padding-right: 1.5%;"></label>
+
+
+                    <input class="answer" type="radio" name="q2" value="1">
+                    <label id="correctString2"><img src="Images/02option3.png" width="29%"  style="padding-right: 1.5%;"></label>
+
+            </div>    
+	  	</center></div>
+    
+     <hr style="height:2px;border-width:0;color:gray;background-color:lightgrey; width: 50%">
+    
+	  	<div style="padding-bottom: 50px;  padding-top: 50px;">
+	  		<p class="question">3. Please select the pattern modification that will correct the garment fit</p>
+            <center>
+            <div style="margin-left: 0px; width:97%; padding-left:3%; height: 400px; background-color: ;" class="sketchfab-embed-wrapper"><center> 
+                <iframe style="float:left; height:400px;" width="45%" title="back neck tight 2" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/1c0b017baaa7473aabba56312660295f/embed"> </iframe> 
+                <img style="max-width: 45%; max-height: 400px;" src="Images/03Original%20Pattern.png">
+            </center></div>
+	    	<br><br>
+             <div style="margin-left: 0px; padding-left:2%; background-color: ;"> 
+                    <input class="answer" type="radio" name="q3" value="0">
+                    <label><img src="Images/03option1.png" width="29%" style="padding-right: 1.5%;"></label>
+
+
+                    <input class="answer" type="radio" name="q3" value="0">
+                    <label><img src="Images/03option2.png" width="29%"  style="padding-right: 1.5%;"></label>
+
+
+                    <input class="answer" type="radio" name="q3" value="1">
+                    <label id="correctString3"><img src="Images/03option3.png" width="29%"  style="padding-right: 1.5%;"></label>
+
+            </div>    
+	  	</center></div>
+    
+     <hr style="height:2px;border-width:0;color:gray;background-color:lightgrey; width: 50%">
+    
+	  	<div style="padding-bottom: 50px;  padding-top: 50px;">
+	  		<p class="question">4. Please select the pattern modification that will correct the garment fit</p>
+            <center>
+            <div style="margin-left: 0px; width:97%; padding-left:3%; height: 400px; background-color: ;" class="sketchfab-embed-wrapper"><center> 
+                <iframe style="float:left; height:400px;" width="45%" title="back neck tight 2" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/979ffb4ef7284f949e394ba27620719c/embed"> </iframe> 
+                <img style="max-width: 45%; max-height: 400px;" src="Images/04OriginalPattern.png">
+            </center></div>
+	    	<br><br>
+             <div style="margin-left: 0px; padding-left:2%; background-color: ;"> 
+                    <input class="answer" type="radio" name="q4" value="0">
+                    <label><img src="Images/04option1.png" width="29%" style="padding-right: 1.5%;"></label>
+
+
+                    <input class="answer" type="radio" name="q4" value="0">
+                    <label><img src="Images/04option2.png" width="29%"  style="padding-right: 1.5%;"></label>
+
+
+                    <input class="answer" type="radio" name="q4" value="1">
+                    <label id="correctString4"><img src="Images/04option3.png" width="29%"  style="padding-right: 1.5%;"></label>
+
+            </div>    
+	  	</center></div>
+    
+    
+     <hr style="height:2px;border-width:0;color:gray;background-color:lightgrey; width: 50%">
+    
+	  	<div style="padding-bottom: 50px;  padding-top: 50px;">
+	  		<p class="question">5. Please select the pattern modification that will correct the garment fit</p>
+            <center>
+            <div style="margin-left: 0px; width:97%; padding-left:3%; height: 400px; background-color: ;" class="sketchfab-embed-wrapper"><center> 
+                <iframe style="float:left; height:400px;" width="45%" title="back neck tight 2" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/1214c9134f884271a1bbad47add28639/embed"> </iframe> 
+                <img style="max-width: 45%; max-height: 400px;" src="Images/05OriginalPattern.png">
+            </center></div>
+	    	<br><br>
+             <div style="margin-left: 0px; padding-left:2%; background-color: ;"> 
+                    <input class="answer" type="radio" name="q5" value="0">
+                    <label><img src="Images/05option1.png" width="29%" style="padding-right: 1.5%;"></label>
+
+
+                    <input class="answer" type="radio" name="q5" value="0">
+                    <label><img src="Images/05option2.png" width="29%"  style="padding-right: 1.5%;"></label>
+
+
+                    <input class="answer" type="radio" name="q5" value="1">
+                    <label id="correctString5"><img src="Images/05option3.png" width="29%"  style="padding-right: 1.5%;"></label>
+
+            </div>    
+	  	</center></div>
+    
+    
+     <hr style="height:2px;border-width:0;color:gray;background-color:lightgrey; width: 50%">
+    
+	  	<div style="padding-bottom: 50px;  padding-top: 50px;">
+	  		<p class="question">6. Please select the pattern modification that will correct the garment fit</p>
+            <center>
+            <div style="margin-left: 0px; width:97%; padding-left:3%; height: 400px; background-color: ;" class="sketchfab-embed-wrapper"><center> 
+                <iframe style="float:left; height:400px;" width="45%" title="back neck tight 2" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/715fbfc25c914ae0b8edeca1e25d767e/embed"> </iframe> 
+                <img style="max-width: 45%; max-height: 400px;" src="Images/06OriginalPattern.png">
+            </center></div>
+	    	<br><br>
+             <div style="margin-left: 0px; padding-left:2%; background-color: ;"> 
+                    <input class="answer" type="radio" name="q6" value="0">
+                    <label><img src="Images/06option1.png" width="29%" style="padding-right: 1.5%;"></label>
+
+
+                    <input class="answer" type="radio" name="q6" value="0">
+                    <label><img src="Images/06option2.png" width="29%"  style="padding-right: 1.5%;"></label>
+
+
+                    <input class="answer" type="radio" name="q6" value="1">
+                    <label id="correctString6"><img src="Images/06option3.png" width="29%"  style="padding-right: 1.5%;"></label>
+
+            </div>    
+	  	</center></div>
+    
+    
+    
+     <hr style="height:2px;border-width:0;color:gray;background-color:lightgrey; width: 50%">
+    
+	  	<div style="padding-bottom: 50px;  padding-top: 50px;">
+	  		<p class="question">7. Please select the pattern modification that will correct the garment fit</p>
+            <center>
+            <div style="margin-left: 0px; width:97%; padding-left:3%; height: 400px; background-color: ;" class="sketchfab-embed-wrapper"><center> 
+                <iframe style="float:left; height:400px;" width="45%" title="back neck tight 2" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/7acd43dbc3cd4d92956b30fb2b8701a9/embed"> </iframe> 
+                <img style="max-width: 45%; max-height: 400px;" src="Images/07OriginalPattern.png">
+            </center></div>
+	    	<br><br>
+             <div style="margin-left: 0px; padding-left:2%; background-color: ;"> 
+                    <input class="answer" type="radio" name="q7" value="1">
+                    <label id="correctString7"><img src="Images/07option1.png" width="29%" style="padding-right: 1.5%;"></label>
+
+
+                    <input class="answer" type="radio" name="q7" value="0">
+                    <label><img src="Images/07option2.png" width="29%"  style="padding-right: 1.5%;"></label>
+
+
+                    <input class="answer" type="radio" name="q7" value="0">
+                    <label><img src="Images/07option3.png" width="29%"  style="padding-right: 1.5%;"></label>
+
+            </div>    
+	  	</center></div>
+    
+    
+     <hr style="height:2px;border-width:0;color:gray;background-color:lightgrey; width: 50%">
+    
+	  	<div style="padding-bottom: 50px;  padding-top: 50px;">
+	  		<p class="question">8. Please select the pattern modification that will correct the garment fit</p>
+            <center>
+            <div style="margin-left: 0px; width:97%; padding-left:3%; height: 400px; background-color: ;" class="sketchfab-embed-wrapper"><center> 
+                <iframe style="float:left; height:400px;" width="45%" title="back neck tight 2" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/94757af69b2b41b0b6b578d95b5767d2/embed"> </iframe> 
+                <img style="max-width: 45%; max-height: 400px;" src="Images/08OriginalPattern.png">
+            </center></div>
+	    	<br><br>
+             <div style="margin-left: 0px; padding-left:2%; background-color: ;"> 
+                    <input class="answer" type="radio" name="q8" value="1">
+                    <label id="correctString8"><img src="Images/08option1.png" width="29%" style="padding-right: 1.5%;"></label>
+
+
+                    <input class="answer" type="radio" name="q8" value="0">
+                    <label><img src="Images/08option2.png" width="29%"  style="padding-right: 1.5%;"></label>
+
+
+                    <input class="answer" type="radio" name="q8" value="0">
+                    <label><img src="Images/08option3.png" width="29%"  style="padding-right: 1.5%;"></label>
+
+            </div>    
+	  	</center></div>
+    
+    
+    
+    
+     <hr style="height:2px;border-width:0;color:gray;background-color:lightgrey; width: 50%">
+    
+	  	<div style="padding-bottom: 50px;  padding-top: 50px;">
+	  		<p class="question">9. Please select the pattern modification that will correct the garment fit</p>
+            <center>
+            <div style="margin-left: 0px; width:97%; padding-left:3%; height: 400px; background-color: ;" class="sketchfab-embed-wrapper"><center> 
+                <iframe style="float:left; height:400px;" width="45%" title="back neck tight 2" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/ba27baec4ab048b3a0e5e18d56804fa8/embed"> </iframe> 
+                <img style="max-width: 45%; max-height: 400px;" src="Images/09OriginalPattern.png">
+            </center></div>
+	    	<br><br>
+             <div style="margin-left: 0px; padding-left:2%; background-color: ;"> 
+                    <input class="answer" type="radio" name="q9" value="1">
+                    <label id="correctString9"><img src="Images/09option1.png" width="29%" style="padding-right: 1.5%;"></label>
+
+
+                    <input class="answer" type="radio" name="q9" value="0">
+                    <label><img src="Images/09option2.png" width="29%"  style="padding-right: 1.5%;"></label>
+
+
+                    <input class="answer" type="radio" name="q9" value="0">
+                    <label><img src="Images/09option3.png" width="29%"  style="padding-right: 1.5%;"></label>
+
+            </div>    
+	  	</center></div>
+    
+    
+    
+    
+     <hr style="height:2px;border-width:0;color:gray;background-color:lightgrey; width: 50%">
+    
+	  	<div style="padding-bottom: 50px;  padding-top: 50px;">
+	  		<p class="question">10. Please select the pattern modification that will correct the garment fit</p>
+            <center>
+            <div style="margin-left: 0px; width:97%; padding-left:3%; height: 400px; background-color: ;" class="sketchfab-embed-wrapper"><center> 
+                <iframe style="float:left; height:400px;" width="45%" title="back neck tight 2" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/2d93d7f18b4c4a4e81f53a44e12300de/embed"> </iframe> 
+                <img style="max-width: 45%; max-height: 400px;" src="Images/10OriginalPattern.png">
+            </center></div>
+	    	<br><br>
+             <div style="margin-left: 0px; padding-left:2%; background-color: ;"> 
+                    <input class="answer" type="radio" name="q10" value="1">
+                    <label id="correctString10"><img src="Images/10option1.png" width="29%" style="padding-right: 1.5%;"></label>
+
+
+                    <input class="answer" type="radio" name="q10" value="0">
+                    <label><img src="Images/10option2.png" width="29%"  style="padding-right: 1.5%;"></label>
+
+
+                    <input class="answer" type="radio" name="q10" value="0">
+                    <label><img src="Images/10option3.png" width="29%"  style="padding-right: 1.5%;"></label>
+
+            </div>    
+	  	</center></div>
+    
+<br/>
+ <center> <div class="submitter">
+          <input class="quizSubmit" id="submitButton" onClick="submitQuiz()"
+          type="submit" value="Submit" />
+</div></center>
+  
+
+<!--    <div class="quizAnswers" id="correctAnswer1"></div>
+	    <div class="quizAnswers" id="correctAnswer2"></div>
+    <div class="quizAnswers" id="correctAnswer3"></div>
+    <div class="quizAnswers" id="correctAnswer4"></div>
+
+
+    <div>
+    	<h2 class="quizScore" id="userScore"></h2>
+    </div>
+   --> 
+    
+    
+    
+    
+    <script type="text/javascript">
+   	function submitQuiz() {
+		console.log('submitted');
+
+	// get each answer score
+		function answerScore (qName) {
+			var radiosNo = document.getElementsByName(qName);
+
+			for (var i = 0, length = radiosNo.length; i < length; i++) {
+   				if (radiosNo[i].checked) {
+			// do something with radiosNo
+					var answerValue = Number(radiosNo[i].value);
+				}
+			}
+			// change NaNs to zero
+			if (isNaN(answerValue)) {
+				answerValue = 0;
+			}
+			return answerValue;
+		}
+
+	// calc score with answerScore function
+		var calcScore = (answerScore('q1') + answerScore('q2') + answerScore('q3') + answerScore('q4') + answerScore('q5') + answerScore('q6') + answerScore('q7') + answerScore('q8') + answerScore('q9') + answerScore('q10'));
+		console.log("CalcScore: " + calcScore); // it works!
+
+	// function to return correct answer string
+		function correctAnswer (correctStringNo, qNumber) {
+			console.log("qNumber: " + qNumber);  // logs 1,2,3,4 after called below
+			return ("The correct answer for question #" + qNumber + ": &nbsp;<strong>" +
+				(document.getElementById(correctStringNo).innerHTML) + "</strong>");
+			}
+
+	// print correct answers only if wrong (calls correctAnswer function)
+		
+	// calculate "possible score" integer
+		var questionCountArray = document.getElementsByClassName('question');
+
+		var questionCounter = 0;
+		for (var i = 0, length = questionCountArray.length; i < length; i++) {
+			questionCounter++;
+		}
+
+	// show score as "score/possible score"
+	//	var showScore = "Your Score: " + calcScore +"/" + questionCounter;
+	// if 4/4, "perfect score!"
+	//	if (calcScore === questionCounter) {
+	//		showScore = showScore + "&nbsp; <strong>Perfect Score!</strong>"
+	//	};
+	//	document.getElementById('userScore').innerHTML = showScore;
+	
+    
+                // Get the data from each element on the form.
+    	const name = document.getElementById('code');
+        
+        // This variable stores all the data.
+        let data = 
+            'Pre-Training Questionnaire' + ' \r\n' + 
+            code.value + ' \r\n' + 
+            answerScore('q1') + ' \r\n' + 
+            answerScore('q2') + ' \r\n' + 
+            answerScore('q3') + ' \r\n' + 
+            answerScore('q4') + ' \r\n' + 
+            answerScore('q5') + ' \r\n' + 
+            answerScore('q6') + ' \r\n' + 
+            answerScore('q7') + ' \r\n' + 
+            answerScore('q8') + ' \r\n' + 
+            answerScore('q9') + ' \r\n' + 
+            answerScore('q10') + ' \r\n' + 
+            calcScore + ' \r\n ';
+        
+        // Convert the text to BLOB.
+        const textToBLOB = new Blob([data], { type: 'text/plain' });
+        const sFileName = code.value+'(pre).txt';	   // The file to save the data.
+
+        let newLink = document.createElement("a");
+        newLink.download = sFileName;
+
+        if (window.webkitURL != null) {
+            newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+        }
+        
+        else {
+            newLink.href = window.URL.createObjectURL(textToBLOB);
+            newLink.style.display = "none";
+            document.body.appendChild(newLink);
+        }
+
+        newLink.click(); 
+    }
+
+$(document).ready(function() {
+
+	$('#submitButton').click(function() {
+		$(this).addClass('hide');
+	});
+
+});
+        
+
+    </script>
+</body>
+</html>
