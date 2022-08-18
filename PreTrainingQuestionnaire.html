@@ -19,27 +19,23 @@
 <body>
 
     <div>
-      <br> <p style="padding-left: 8vw;">Enter Participant Code: <input type="text" id="code" placeholder="" /></p>
+      <br> <p style="padding-left: 8vw; color: coral;font-size: 1.5em;"><b>Enter Participant Code: </b><input type="text" id="code" placeholder="" /></p>
     </div>
-
-
-   
     
     <div width="100%" style="min-height: 350px;">
     <div style="width: 1500px; margin: auto;">
         <h1>Pre- Training Questionnaire</h1>
         <h3>Project Title: Improving understanding of connecting 2D and 3D using digital prototyping and virtual reality</h3>
              
-     <hr style="height:2px;border-width:0;color:gray;background-color:lightgrey; width: 100%">
+    
         <p>1. Please fill in the blanks or select an item for your demographic information</p>
-        <ol type="a">
+        <ol type="i">
             <li>Age: &emsp;&emsp;
                 <input type="text" id="age" placeholder="" name="sec1q1"/>
             </li><br>
-            <li>Gender: &emsp;&emsp;
+            <li>Sex: &emsp;&emsp; &emsp;&nbsp;
                 <input class="answer" type="radio" name="sec1q2" value="1"><label class="options"> &nbsp;Male</label>&emsp;&emsp;
                 <input class="answer" type="radio" name="sec1q2" value="2"><label class="options"> &nbsp;Female</label>&emsp;&emsp;
-                <input class="answer" type="radio" name="sec1q2" value="3"><label class="options"> &nbsp;Other</label>
             </li><br>
             <li>Race: &emsp;&emsp;&emsp;
                 <input class="answer" type="radio" name="sec1q3" value="1"><label class="options"> &nbsp;American Indian or Alaska Native</label>&emsp;&emsp;
@@ -61,30 +57,31 @@
      <hr style="height:2px;border-width:0;color:gray;background-color:lightgrey; width: 100%">
         
         <p>2. Please fill in the following information based on your experience</p>
-        <ol type="a">
+        <ol type="i">
             <li>Years of pattern making experience: &emsp;&emsp;
-                <input class="answer" type="radio" name="sec2q1" value="1"><label class="options"> &nbsp;1-2</label>&emsp;&emsp;
-                <input class="answer" type="radio" name="sec2q1" value="2"><label class="options"> &nbsp;3-4</label>&emsp;&emsp;
-                <input class="answer" type="radio" name="sec2q1" value="3"><label class="options"> &nbsp;5-6</label>&emsp;&emsp;
-                <input class="answer" type="radio" name="sec2q1" value="4"><label class="options"> &nbsp;7-8</label>&emsp;&emsp;
-                <input class="answer" type="radio" name="sec2q1" value="5"><label class="options"> &nbsp;9-10</label>&emsp;&emsp;
-                <input class="answer" type="radio" name="sec2q1" value="6"><label class="options"> &nbsp;>10</label>&emsp;&emsp;
-            </li><br>
-            <li>Virtual reality experience: &emsp; &emsp; &emsp;&emsp;&emsp;&nbsp;
-                <input class="answer" type="radio" name="sec2q2" value="1"><label class="options"> &nbsp;None</label>&emsp;&emsp;
-                <input class="answer" type="radio" name="sec2q2" value="2"><label class="options"> &nbsp;Very little</label>&emsp;&emsp;
-                <input class="answer" type="radio" name="sec2q2" value="3"><label class="options"> &nbsp;Average</label>&emsp;&emsp;
-                <input class="answer" type="radio" name="sec2q2" value="4"><label class="options"> &nbsp;High</label>&emsp;&emsp;
-                <input class="answer" type="radio" name="sec2q2" value="5"><label class="options"> &nbsp;Expert</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec2q1" value="1"><label class="options"> &nbsp;None</label>&emsp;&emsp;&emsp;&emsp;
+                <input class="answer" type="radio" name="sec2q1" value="2"><label class="options"> &nbsp;Very Minimum </label>&emsp;&emsp;&nbsp;&nbsp;&nbsp;
+                <input class="answer" type="radio" name="sec2q1" value="3"><label class="options"> &nbsp;Moderate </label>&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;
+                <input class="answer" type="radio" name="sec2q1" value="4"><label class="options"> &nbsp;A lot </label>&emsp;&emsp;
+                <br><br>
+                Please list the courses you have completed:<br>
+                <textarea id ="courses" rows="5" cols="60" name="sec2q2" placeholder="Course Names"></textarea>
+            </li><br><br>
+            <li>Video game experience: &emsp; &emsp; &emsp;&emsp;&emsp;&nbsp;
+                    
+                <input class="answer" type="radio" name="sec2q3" value="1"><label class="options"> &nbsp;None</label>&emsp;&emsp;&emsp;&emsp;
+                <input class="answer" type="radio" name="sec2q3" value="2"><label class="options"> &nbsp;Very Minimum</label>&emsp;&emsp;&emsp;
+                <input class="answer" type="radio" name="sec2q3" value="3"><label class="options"> &nbsp;Moderate</label>&emsp;&emsp;&emsp;&emsp;
+                <input class="answer" type="radio" name="sec2q3" value="4"><label class="options"> &nbsp;A lot</label>&emsp;&emsp;
             </li><br>
         </ol>
         
                 
+                <!--
      <hr style="height:2px;border-width:0;color:gray;background-color:lightgrey; width: 100%">
-                
-        <p>3. Please rate the following on a 7 point Likert scale based on your perception of ease of use of digital prototyping</p>
+        <p>3. Please rate the following on a 5 point Likert scale based on your experience with the training module</p>
         <ol type="a">
-            <li>Learning to use 3D prototyping would be easy : &emsp;&emsp;<br><br>    
+            <li>I enjoyed this type of computer program very much : &emsp;&emsp;<br><br>    
                 <input class="answer" type="radio" name="sec3q1" value="1"><label class="options"> &nbsp;Strongly agree</label>&emsp;&emsp;
                 <input class="answer" type="radio" name="sec3q1" value="2"><label class="options"> &nbsp;Agree&emsp;&emsp;</label>&emsp;&emsp;
                 <input class="answer" type="radio" name="sec3q1" value="3"><label class="options"> &nbsp;Somewhat agree</label>&emsp;&emsp;
@@ -200,11 +197,11 @@
                 <input class="answer" type="radio" name="sec4q6" value="7"><label class="options"> &nbsp;Strongly disagree</label>&emsp;&emsp;
             </li><br>
         </ol>
-        
-                
+        -->
+      <div class="asvt">        
      <hr style="height:2px;border-width:0;color:gray;background-color:lightgrey; width: 100%">
         
-         <p>5. <b>Apparel Spatial Visualization Test:</b>The following section consists of 10 sets of pattern pieces, which can be constructed, in fabric to create a garment. To the right of each set of pattern pieces there are sketches of some garments. You are to decide which one of these garments can be made from the pattern pieces shown. The sketch always shows the outside, front view of the garment. <br>Remember: In this test there will always be a group of five (5) sketches, following each set of pattern pieces. In every group there is only one correct garment sketch. Study the set of pattern pieces carefully and decide which garment can be made from it. Show your choice by selecting the lettered button, which is the same as that of the garment you have chosen. Work as rapidly and as accurately as you can. If you are not sure of an answer, mark the choice, which is your best guess.</p>
+         <p>3. <b>Apparel Spatial Visualization Test:<br></b>The following section consists of 10 sets of pattern pieces, which can be constructed, in fabric to create a garment. To the right of each set of pattern pieces there are sketches of some garments. You are to decide which one of these garments can be made from the pattern pieces shown. The sketch always shows the outside, front view of the garment. <br>Remember: In this test there will always be a group of five (5) sketches, following each set of pattern pieces. In every group there is only one correct garment sketch. Study the set of pattern pieces carefully and decide which garment can be made from it. Show your choice by selecting the lettered button, which is the same as that of the garment you have chosen. Work as rapidly and as accurately as you can. If you are not sure of an answer, mark the choice, which is your best guess.</p>
         <center><ol type="a">
             <li><br><img src="Images/asvt1.png" width="600px"><br><br>    
                 <input class="answer" type="radio" name="sec5q1" value="1"><label class="options"> &nbsp;A&emsp;&emsp;</label>&emsp;&emsp;
@@ -286,7 +283,8 @@
                 <input class="answer" type="radio" name="sec5q10" value="5"><label class="options"> &nbsp;E&emsp;&emsp;</label>&emsp;&emsp;
             </li><br>
         </ol></center>    
-                    
+        </div>
+        
      <hr style="height:2px;border-width:0;color:gray;background-color:lightgrey; width: 100%">
         
         <br>
@@ -297,9 +295,9 @@
             <li>Three options of which one will correct the garment fit (red lines represent the pattern modification)</li>
         </ul> 
         You will have to analyze the garment fit and patterns carefully to identify the fit issue and choose the potential pattern modification that will correct the garment fit. 
-        Try to answer the questions as rapidly and accurately as you can. Please indicate your choice by selecting the radio button next to the image representing the right pattern modificaition.<br><br><br>
+        Try to answer the questions as rapidly and accurately as you can. Please indicate your choice by selecting the radio button next to the image representing the right pattern modificaition.<br>
 
-	  	<div style="padding-bottom: 50px;">
+	  	<div class="fcst">
 	  		<p class="question">a. Please select the pattern modification that will correct the garment fit</p>
             <center>
             <div style="margin-left: 0px; width:97%; padding-left:3%; height: 400px; background-color: ;" class="sketchfab-embed-wrapper"><center> 
@@ -324,7 +322,7 @@
     
     <hr style="height:2px;border-width:0;color:gray;background-color:lightgrey; width: 50%">
     
-	  	<div style="padding-bottom: 50px;  padding-top: 50px;">
+	  	<div class="fcst">
 	  		<p class="question">b. Please select the pattern modification that will correct the garment fit</p>
             <center>
             <div style="margin-left: 0px; width:97%; padding-left:3%; height: 400px; background-color: ;" class="sketchfab-embed-wrapper"><center> 
@@ -349,7 +347,7 @@
     
      <hr style="height:2px;border-width:0;color:gray;background-color:lightgrey; width: 50%">
     
-	  	<div style="padding-bottom: 50px;  padding-top: 50px;">
+	  	<div class="fcst">
 	  		<p class="question">c. Please select the pattern modification that will correct the garment fit</p>
             <center>
             <div style="margin-left: 0px; width:97%; padding-left:3%; height: 400px; background-color: ;" class="sketchfab-embed-wrapper"><center> 
@@ -374,7 +372,7 @@
     
      <hr style="height:2px;border-width:0;color:gray;background-color:lightgrey; width: 50%">
     
-	  	<div style="padding-bottom: 50px;  padding-top: 50px;">
+	  	<div class="fcst">
 	  		<p class="question">d. Please select the pattern modification that will correct the garment fit</p>
             <center>
             <div style="margin-left: 0px; width:97%; padding-left:3%; height: 400px; background-color: ;" class="sketchfab-embed-wrapper"><center> 
@@ -400,7 +398,7 @@
     
      <hr style="height:2px;border-width:0;color:gray;background-color:lightgrey; width: 50%">
     
-	  	<div style="padding-bottom: 50px;  padding-top: 50px;">
+	  	<div class="fcst">
 	  		<p class="question">e. Please select the pattern modification that will correct the garment fit</p>
             <center>
             <div style="margin-left: 0px; width:97%; padding-left:3%; height: 400px; background-color: ;" class="sketchfab-embed-wrapper"><center> 
@@ -426,7 +424,7 @@
     
      <hr style="height:2px;border-width:0;color:gray;background-color:lightgrey; width: 50%">
     
-	  	<div style="padding-bottom: 50px;  padding-top: 50px;">
+	  	<div class="fcst">
 	  		<p class="question">f. Please select the pattern modification that will correct the garment fit</p>
             <center>
             <div style="margin-left: 0px; width:97%; padding-left:3%; height: 400px; background-color: ;" class="sketchfab-embed-wrapper"><center> 
@@ -453,7 +451,7 @@
     
      <hr style="height:2px;border-width:0;color:gray;background-color:lightgrey; width: 50%">
     
-	  	<div style="padding-bottom: 50px;  padding-top: 50px;">
+	  	<div class="fcst">
 	  		<p class="question">g. Please select the pattern modification that will correct the garment fit</p>
             <center>
             <div style="margin-left: 0px; width:97%; padding-left:3%; height: 400px; background-color: ;" class="sketchfab-embed-wrapper"><center> 
@@ -479,7 +477,7 @@
     
      <hr style="height:2px;border-width:0;color:gray;background-color:lightgrey; width: 50%">
     
-	  	<div style="padding-bottom: 50px;  padding-top: 50px;">
+	  	<div class="fcst">
 	  		<p class="question">h. Please select the pattern modification that will correct the garment fit</p>
             <center>
             <div style="margin-left: 0px; width:97%; padding-left:3%; height: 400px; background-color: ;" class="sketchfab-embed-wrapper"><center> 
@@ -507,7 +505,7 @@
     
      <hr style="height:2px;border-width:0;color:gray;background-color:lightgrey; width: 50%">
     
-	  	<div style="padding-bottom: 50px;  padding-top: 50px;">
+	  	<div class="fcst">
 	  		<p class="question">i. Please select the pattern modification that will correct the garment fit</p>
             <center>
             <div style="margin-left: 0px; width:97%; padding-left:3%; height: 400px; background-color: ;" class="sketchfab-embed-wrapper"><center> 
@@ -535,7 +533,7 @@
     
      <hr style="height:2px;border-width:0;color:gray;background-color:lightgrey; width: 50%">
     
-	  	<div style="padding-bottom: 50px;  padding-top: 50px;">
+	  	<div class="fcst">
 	  		<p class="question">j. Please select the pattern modification that will correct the garment fit</p>
             <center>
             <div style="margin-left: 0px; width:97%; padding-left:3%; height: 400px; background-color: ;" class="sketchfab-embed-wrapper"><center> 
@@ -599,9 +597,10 @@
             answerScore('sec1q3') + ' \r\n' +
             answerScore('sec1q4') + ' \r\n' +  
             answerScore('sec2q1') + ' \r\n' +  
-            answerScore('sec2q2') + ' \r\n' +  
+            courses.value + ' \r\n' +   
+            answerScore('sec2q3') + ' \r\n' +  
             answerScore('sec3q1') + ' \r\n' +  
-            answerScore('sec3q2') + ' \r\n' +  
+            /*answerScore('sec3q2') + ' \r\n' +  
             answerScore('sec3q3') + ' \r\n' +  
             answerScore('sec3q4') + ' \r\n' +  
             answerScore('sec3q5') + ' \r\n' +  
@@ -611,7 +610,7 @@
             answerScore('sec4q3') + ' \r\n' +  
             answerScore('sec4q4') + ' \r\n' +  
             answerScore('sec4q5') + ' \r\n' +  
-            answerScore('sec4q6') + ' \r\n' +  
+            answerScore('sec4q6') + ' \r\n' +*/  
             answerScore('sec5q1') + ' \r\n' +  
             answerScore('sec5q2') + ' \r\n' +  
             answerScore('sec5q3') + ' \r\n' +  
