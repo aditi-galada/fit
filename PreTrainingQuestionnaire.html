@@ -36,9 +36,9 @@
             <li>Sex: &emsp;&emsp; &emsp;&nbsp;
                 <input class="answer" type="radio" name="sec1q2" value="1"><label class="options"> &nbsp;Woman</label>&emsp;&emsp;
                 <input class="answer" type="radio" name="sec1q2" value="2"><label class="options"> &nbsp;Man</label>&emsp;&emsp;
-                <input class="answer" type="radio" name="sec1q2" value="2"><label class="options"> &nbsp;Non-Binary</label>&emsp;&emsp;
-                <input class="answer" type="radio" name="sec1q2" value="2"><label class="options"> &nbsp;Prefer not to disclose</label>&emsp;&emsp;
-                <input class="answer" type="radio" name="sec1q2" value="2"><label class="options"> &nbsp;Other</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec1q2" value="3"><label class="options"> &nbsp;Non-Binary</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec1q2" value="4"><label class="options"> &nbsp;Prefer not to disclose</label>&emsp;&emsp;
+                <input class="answer" type="radio" name="sec1q2" value="5"><label class="options"> &nbsp;Other</label>&emsp;&emsp;
             </li><br>
                     
             
@@ -602,6 +602,7 @@
         let data = 
             'Pre-Training Questionnaire' + ' \r\n' + 
             code.value + ' \r\n' + 
+            'Demographics' + ' \r\n' + 
             age.value + ' \r\n' + 
             answerScore('sec1q2') + ' \r\n' + 
             answerScore('sec1q3') + ' \r\n' +
@@ -609,8 +610,9 @@
             answerScore('sec2q1') + ' \r\n' +  
             courses.value + ' \r\n' +   
             answerScore('sec2q3') + ' \r\n' +  
+            /*
             answerScore('sec3q1') + ' \r\n' +  
-            /*answerScore('sec3q2') + ' \r\n' +  
+            answerScore('sec3q2') + ' \r\n' +  
             answerScore('sec3q3') + ' \r\n' +  
             answerScore('sec3q4') + ' \r\n' +  
             answerScore('sec3q5') + ' \r\n' +  
@@ -621,6 +623,7 @@
             answerScore('sec4q4') + ' \r\n' +  
             answerScore('sec4q5') + ' \r\n' +  
             answerScore('sec4q6') + ' \r\n' +*/  
+            'ASVT' + ' \r\n' + 
             answerScore('sec5q1') + ' \r\n' +  
             answerScore('sec5q2') + ' \r\n' +  
             answerScore('sec5q3') + ' \r\n' +  
@@ -631,6 +634,7 @@
             answerScore('sec5q8') + ' \r\n' +  
             answerScore('sec5q9') + ' \r\n' +  
             answerScore('sec5q10') + ' \r\n' +   
+            'FCST' + ' \r\n' + 
             answerScore('q1') + ' \r\n' + 
             answerScore('q2') + ' \r\n' + 
             answerScore('q3') + ' \r\n' + 
